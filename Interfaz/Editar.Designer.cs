@@ -1,4 +1,4 @@
-﻿namespace Sistema_de_gestion_de_Pacientes.Vistas
+namespace Sistema_de_gestion_de_Pacientes.Vistas
 {
     partial class Editar
     {
@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtDiagnostico2 = new TextBox();
-            txtEdad2 = new TextBox();
+            txtDiagnosticoEdicion = new TextBox();
+            txtEdadEdicion = new TextBox();
             lbFecha = new Label();
             lbEstado = new Label();
             lbSexo = new Label();
             lbDiagnostico = new Label();
             lbEdad = new Label();
             lbNombre = new Label();
-            dtFecha2 = new DateTimePicker();
-            combEstado2 = new ComboBox();
-            combSexo2 = new ComboBox();
-            txtNombre2 = new TextBox();
+            dtFechaEdicion = new DateTimePicker();
+            cmbEstadoEdicion = new ComboBox();
+            cmbSexoEdicion = new ComboBox();
+            txtNombreEdicion = new TextBox();
             lbTitulo = new Label();
-            button1 = new Button();
+            btnConfirmarEdicion = new Button();
             SuspendLayout();
             // 
-            // txtDiagnostico2
+            // txtDiagnosticoEdicion
             // 
-            txtDiagnostico2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDiagnostico2.Location = new Point(284, 255);
-            txtDiagnostico2.Name = "txtDiagnostico2";
-            txtDiagnostico2.Size = new Size(193, 35);
-            txtDiagnostico2.TabIndex = 29;
+            txtDiagnosticoEdicion.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDiagnosticoEdicion.Location = new Point(284, 255);
+            txtDiagnosticoEdicion.Name = "txtDiagnosticoEdicion";
+            txtDiagnosticoEdicion.Size = new Size(193, 35);
+            txtDiagnosticoEdicion.TabIndex = 29;
             // 
-            // txtEdad2
+            // txtEdadEdicion
             // 
-            txtEdad2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEdad2.Location = new Point(284, 107);
-            txtEdad2.Name = "txtEdad2";
-            txtEdad2.Size = new Size(193, 35);
-            txtEdad2.TabIndex = 28;
+            txtEdadEdicion.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEdadEdicion.Location = new Point(284, 107);
+            txtEdadEdicion.Name = "txtEdadEdicion";
+            txtEdadEdicion.Size = new Size(193, 35);
+            txtEdadEdicion.TabIndex = 28;
             // 
             // lbFecha
             // 
@@ -103,7 +103,7 @@
             lbDiagnostico.TabIndex = 24;
             lbDiagnostico.Text = "Diagnostico";
             lbDiagnostico.TextAlign = ContentAlignment.TopCenter;
-            lbDiagnostico.Click += label5_Click;
+            lbDiagnostico.Click += lbDiagnostico_Click;
             // 
             // lbEdad
             // 
@@ -126,39 +126,39 @@
             lbNombre.TabIndex = 22;
             lbNombre.Text = "Nombre Completo";
             // 
-            // dtFecha2
+            // dtFechaEdicion
             // 
-            dtFecha2.Location = new Point(12, 264);
-            dtFecha2.Name = "dtFecha2";
-            dtFecha2.Size = new Size(230, 23);
-            dtFecha2.TabIndex = 21;
+            dtFechaEdicion.Location = new Point(12, 264);
+            dtFechaEdicion.Name = "dtFechaEdicion";
+            dtFechaEdicion.Size = new Size(230, 23);
+            dtFechaEdicion.TabIndex = 21;
             // 
-            // combEstado2 - elementos consistentes con el enum EstadoPaciente
-            combEstado2.Font = new Font("Segoe UI", 16F);
-            combEstado2.FormattingEnabled = true;
-            combEstado2.Items.AddRange(new object[] { "Ingresado", "EnObservacion", "DeAlta", "Hospitalizado" });
-            combEstado2.Location = new Point(285, 178);
-            combEstado2.Name = "combEstado2";
-            combEstado2.Size = new Size(192, 38);
-            combEstado2.TabIndex = 20;
+            // cmbEstadoEdicion - elementos consistentes con el enum EstadoPaciente
+            cmbEstadoEdicion.Font = new Font("Segoe UI", 16F);
+            cmbEstadoEdicion.FormattingEnabled = true;
+            cmbEstadoEdicion.Items.AddRange(new object[] { "Ingresado", "EnObservacion", "DeAlta", "Hospitalizado" });
+            cmbEstadoEdicion.Location = new Point(285, 178);
+            cmbEstadoEdicion.Name = "cmbEstadoEdicion";
+            cmbEstadoEdicion.Size = new Size(192, 38);
+            cmbEstadoEdicion.TabIndex = 20;
             // 
-            // combSexo2
+            // cmbSexoEdicion
             // 
-            combSexo2.Font = new Font("Segoe UI", 16F);
-            combSexo2.FormattingEnabled = true;
-            combSexo2.Items.AddRange(new object[] { "Masculino", "Femenino" });
-            combSexo2.Location = new Point(14, 178);
-            combSexo2.Name = "combSexo2";
-            combSexo2.Size = new Size(193, 38);
-            combSexo2.TabIndex = 19;
+            cmbSexoEdicion.Font = new Font("Segoe UI", 16F);
+            cmbSexoEdicion.FormattingEnabled = true;
+            cmbSexoEdicion.Items.AddRange(new object[] { "Masculino", "Femenino" });
+            cmbSexoEdicion.Location = new Point(14, 178);
+            cmbSexoEdicion.Name = "cmbSexoEdicion";
+            cmbSexoEdicion.Size = new Size(193, 38);
+            cmbSexoEdicion.TabIndex = 19;
             // 
-            // txtNombre2
+            // txtNombreEdicion
             // 
-            txtNombre2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombre2.Location = new Point(14, 107);
-            txtNombre2.Name = "txtNombre2";
-            txtNombre2.Size = new Size(193, 35);
-            txtNombre2.TabIndex = 18;
+            txtNombreEdicion.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombreEdicion.Location = new Point(14, 107);
+            txtNombreEdicion.Name = "txtNombreEdicion";
+            txtNombreEdicion.Size = new Size(193, 35);
+            txtNombreEdicion.TabIndex = 18;
             // 
             // lbTitulo
             // 
@@ -170,34 +170,34 @@
             lbTitulo.TabIndex = 17;
             lbTitulo.Text = "Datos Del Paciente";
             // 
-            // button1
+            // btnConfirmarEdicion
             // 
-            button1.Location = new Point(156, 322);
-            button1.Name = "button1";
-            button1.Size = new Size(147, 46);
-            button1.TabIndex = 30;
-            button1.Text = "Confirmar edicion";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnConfirmarEdicion.Location = new Point(156, 322);
+            btnConfirmarEdicion.Name = "btnConfirmarEdicion";
+            btnConfirmarEdicion.Size = new Size(147, 46);
+            btnConfirmarEdicion.TabIndex = 30;
+            btnConfirmarEdicion.Text = "Confirmar edicion";
+            btnConfirmarEdicion.UseVisualStyleBackColor = true;
+            btnConfirmarEdicion.Click += btnConfirmarEdicion_Click;
             // 
             // Editar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(489, 380);
-            Controls.Add(button1);
-            Controls.Add(txtDiagnostico2);
-            Controls.Add(txtEdad2);
+            Controls.Add(btnConfirmarEdicion);
+            Controls.Add(txtDiagnosticoEdicion);
+            Controls.Add(txtEdadEdicion);
             Controls.Add(lbFecha);
             Controls.Add(lbEstado);
             Controls.Add(lbSexo);
             Controls.Add(lbDiagnostico);
             Controls.Add(lbEdad);
             Controls.Add(lbNombre);
-            Controls.Add(dtFecha2);
-            Controls.Add(combEstado2);
-            Controls.Add(combSexo2);
-            Controls.Add(txtNombre2);
+            Controls.Add(dtFechaEdicion);
+            Controls.Add(cmbEstadoEdicion);
+            Controls.Add(cmbSexoEdicion);
+            Controls.Add(txtNombreEdicion);
             Controls.Add(lbTitulo);
             Name = "Editar";
             Text = "Editar";
@@ -207,19 +207,19 @@
 
         #endregion
 
-        private TextBox txtDiagnostico2;
-        private TextBox txtEdad2;
+        private TextBox txtDiagnosticoEdicion;
+        private TextBox txtEdadEdicion;
         private Label lbFecha;
         private Label lbEstado;
         private Label lbSexo;
         private Label lbDiagnostico;
         private Label lbEdad;
         private Label lbNombre;
-        private DateTimePicker dtFecha2;
-        private ComboBox combEstado2;
-        private ComboBox combSexo2;
-        private TextBox txtNombre2;
+        private DateTimePicker dtFechaEdicion;
+        private ComboBox cmbEstadoEdicion;
+        private ComboBox cmbSexoEdicion;
+        private TextBox txtNombreEdicion;
         private Label lbTitulo;
-        private Button button1;
+        private Button btnConfirmarEdicion;
     }
 }
