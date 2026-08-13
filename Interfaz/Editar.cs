@@ -1,4 +1,4 @@
-﻿using Sistema_de_gestion_de_Pacientes.Entidades;
+using Sistema_de_gestion_de_Pacientes.Entidades;
 using Sistema_de_gestion_de_Pacientes.Servicios;
 using System;
 using System.Collections.Generic;
@@ -19,35 +19,35 @@ namespace Sistema_de_gestion_de_Pacientes.Vistas
             InitializeComponent();
         _id = id;
 
-            // Cargar los datos del paciente al abrir el formulario de edición
+             // Cargar los datos del paciente al abrir el formulario de edición
             // Esto permite que el usuario vea y modifique los valores actuales
             var lista = gestorPacientes.encontrarPacientePorID(_id);
             if (lista != null && lista.Count > 0)
             {
                 Paciente existente = lista[0];
                 // Rellenar los controles con los datos existentes
-                txtNombre2.Text = existente.NombreCompleto;
-                txtEdad2.Text = existente.Edad.ToString();
-                txtDiagnostico2.Text = existente.Diagnostico;
-                dtFecha2.Value = existente.FechaIngreso;
+                txtNombreEdicion.Text = existente.NombreCompleto;
+                txtEdadEdicion.Text = existente.Edad.ToString();
+                txtDiagnosticoEdicion.Text = existente.Diagnostico;
+                dtFechaEdicion.Value = existente.FechaIngreso;
 
                 // Seleccionar sexo
-                combSexo2.SelectedItem = existente.Sexo == Sexo.Masculino ? "Masculino" : "Femenino";
+                cmbSexoEdicion.SelectedItem = existente.Sexo == Sexo.Masculino ? "Masculino" : "Femenino";
 
                 // Seleccionar el estado correspondiente en el ComboBox
                 switch (existente.Estado)
                 {
                     case EstadoPaciente.Ingresado:
-                        combEstado2.SelectedItem = "Ingresado";
+                        cmbEstadoEdicion.SelectedItem = "Ingresado";
                         break;
                     case EstadoPaciente.EnObservacion:
-                        combEstado2.SelectedItem = "EnObservacion";
+                        cmbEstadoEdicion.SelectedItem = "EnObservacion";
                         break;
                     case EstadoPaciente.DeAlta:
-                        combEstado2.SelectedItem = "DeAlta";
+                        cmbEstadoEdicion.SelectedItem = "DeAlta";
                         break;
                     case EstadoPaciente.Hospitalizado:
-                        combEstado2.SelectedItem = "Hospitalizado";
+                        cmbEstadoEdicion.SelectedItem = "Hospitalizado";
                         break;
                     default:
                         // No hacer nada si no coincide
@@ -56,26 +56,26 @@ namespace Sistema_de_gestion_de_Pacientes.Vistas
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void lbDiagnostico_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConfirmarEdicion_Click(object sender, EventArgs e)
         {
             Paciente p = new Paciente();
 
             try
             {
 
-                p.NombreCompleto = txtNombre2.Text;
-                p.Edad = int.Parse(txtEdad2.Text);
-                p.Diagnostico = txtDiagnostico2.Text;
-                if (combSexo2.SelectedItem.ToString() == "Masculino")
+                p.NombreCompleto = txtNombreEdicion.Text;
+                p.Edad = int.Parse(txtEdadEdicion.Text);
+                p.Diagnostico = txtDiagnosticoEdicion.Text;
+                if (cmbSexoEdicion.SelectedItem.ToString() == "Masculino")
                 {
                     p.Sexo = Sexo.Masculino;
                 }
-                else if (combSexo2.SelectedItem.ToString() == "Femenino")
+                else if (cmbSexoEdicion.SelectedItem.ToString() == "Femenino")
                 {
                     p.Sexo = Sexo.Femenino;
                 }
@@ -87,7 +87,7 @@ namespace Sistema_de_gestion_de_Pacientes.Vistas
 
 
                 // Mapear la selección del ComboBox de estados al enum
-                string estadoSel = combEstado2.SelectedItem?.ToString();
+                string estadoSel = cmbEstadoEdicion.SelectedItem?.ToString();
                 if (estadoSel == "Ingresado")
                 {
                     p.Estado = EstadoPaciente.Ingresado;
@@ -110,7 +110,7 @@ namespace Sistema_de_gestion_de_Pacientes.Vistas
                     return;
                 }
 
-                p.FechaIngreso = (DateTime)dtFecha2.Value;
+                p.FechaIngreso = (DateTime)dtFechaEdicion.Value;
             }
             catch (Exception Err)
             {
