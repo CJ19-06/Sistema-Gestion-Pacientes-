@@ -1,4 +1,4 @@
-﻿namespace Sistema_de_gestion_de_Pacientes
+namespace Sistema_de_gestion_de_Pacientes
 {
     partial class PaginaPrincipal
     {
@@ -29,114 +29,114 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaginaPrincipal));
-            toolStrip1 = new ToolStrip();
-            toolStripTextBox1 = new ToolStripTextBox();
-            refreshBtn = new ToolStripButton();
-            addEmployeeBtn = new ToolStripButton();
-            editBtn = new ToolStripButton();
-            toolStripButton4 = new ToolStripButton();
-            idTxtBox = new ToolStripTextBox();
-            dglistapaciente = new DataGridView();
-            toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dglistapaciente).BeginInit();
+            tlsBarraHerramientas = new ToolStrip();
+            txtBuscarNombre = new ToolStripTextBox();
+            btnRefrescar = new ToolStripButton();
+            btnAgregar = new ToolStripButton();
+            btnEditar = new ToolStripButton();
+            btnBorrar = new ToolStripButton();
+            txtBuscaPorId = new ToolStripTextBox();
+            dgvListaPacientes = new DataGridView();
+            tlsBarraHerramientas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvListaPacientes).BeginInit();
             SuspendLayout();
             // 
-            // toolStrip1
+            // tlsBarraHerramientas
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripTextBox1, refreshBtn, addEmployeeBtn, editBtn, toolStripButton4, idTxtBox });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(877, 25);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            tlsBarraHerramientas.Items.AddRange(new ToolStripItem[] { txtBuscarNombre, btnRefrescar, btnAgregar, btnEditar, btnBorrar, txtBuscaPorId });
+            tlsBarraHerramientas.Location = new Point(0, 0);
+            tlsBarraHerramientas.Name = "tlsBarraHerramientas";
+            tlsBarraHerramientas.Size = new Size(877, 25);
+            tlsBarraHerramientas.TabIndex = 0;
+            tlsBarraHerramientas.Text = "tlsBarraHerramientas";
             // 
-            // toolStripTextBox1
+            // txtBuscarNombre
             // 
-            toolStripTextBox1.Name = "toolStripTextBox1";
-            toolStripTextBox1.Size = new Size(200, 25);
-            toolStripTextBox1.Click += toolStripTextBox1_Click;
-            toolStripTextBox1.TextChanged += toolStripTextBox1_TextChanged;
+            txtBuscarNombre.Name = "txtBuscarNombre";
+            txtBuscarNombre.Size = new Size(200, 25);
+            txtBuscarNombre.Click += txtBuscarNombre_Click;
+            txtBuscarNombre.TextChanged += txtBuscarNombre_TextChanged;
             // 
-            // refreshBtn
+            // btnRefrescar
             // 
-            refreshBtn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            refreshBtn.Image = (Image)resources.GetObject("refreshBtn.Image");
-            refreshBtn.ImageTransparentColor = Color.Magenta;
-            refreshBtn.Name = "refreshBtn";
-            refreshBtn.Size = new Size(23, 22);
-            refreshBtn.Text = "Refresh";
-            refreshBtn.Click += refreshBtn_Click;
+            btnRefrescar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnRefrescar.Image = (Image)resources.GetObject("btnRefrescar.Image");
+            btnRefrescar.ImageTransparentColor = Color.Magenta;
+            btnRefrescar.Name = "btnRefrescar";
+            btnRefrescar.Size = new Size(23, 22);
+            btnRefrescar.Text = "Refrescar";
+            btnRefrescar.Click += btnRefrescar_Click;
             // 
-            // addEmployeeBtn
+            // btnAgregar
             // 
-            addEmployeeBtn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            addEmployeeBtn.Image = (Image)resources.GetObject("addEmployeeBtn.Image");
-            addEmployeeBtn.ImageTransparentColor = Color.Magenta;
-            addEmployeeBtn.Name = "addEmployeeBtn";
-            addEmployeeBtn.Size = new Size(23, 22);
-            addEmployeeBtn.Text = "Agregar";
-            addEmployeeBtn.Click += addEmployeeBtn_Click;
+            btnAgregar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnAgregar.Image = (Image)resources.GetObject("btnAgregar.Image");
+            btnAgregar.ImageTransparentColor = Color.Magenta;
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(23, 22);
+            btnAgregar.Text = "Agregar";
+            btnAgregar.Click += btnAgregar_Click;
             // 
-            // editBtn
+            // btnEditar
             // 
-            editBtn.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            editBtn.Image = (Image)resources.GetObject("editBtn.Image");
-            editBtn.ImageTransparentColor = Color.Magenta;
-            editBtn.Name = "editBtn";
-            editBtn.Size = new Size(23, 22);
-            editBtn.Text = "Editar";
-            editBtn.Click += toolStripButton3_Click;
+            btnEditar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnEditar.Image = (Image)resources.GetObject("btnEditar.Image");
+            btnEditar.ImageTransparentColor = Color.Magenta;
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(23, 22);
+            btnEditar.Text = "Editar";
+            btnEditar.Click += btnEditar_Click;
             // 
-            // toolStripButton4
+            // btnBorrar
             // 
-            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton4.Image = (Image)resources.GetObject("toolStripButton4.Image");
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(23, 22);
-            toolStripButton4.Text = "Borrar";
-            toolStripButton4.Click += toolStripButton4_Click;
+            btnBorrar.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            btnBorrar.Image = (Image)resources.GetObject("btnBorrar.Image");
+            btnBorrar.ImageTransparentColor = Color.Magenta;
+            btnBorrar.Name = "btnBorrar";
+            btnBorrar.Size = new Size(23, 22);
+            btnBorrar.Text = "Borrar";
+            btnBorrar.Click += btnBorrar_Click;
             // 
-            // idTxtBox
+            // txtBuscaPorId
             // 
-            idTxtBox.Name = "idTxtBox";
-            idTxtBox.Size = new Size(100, 25);
-            idTxtBox.TextChanged += idTxtBox_Click;
+            txtBuscaPorId.Name = "txtBuscaPorId";
+            txtBuscaPorId.Size = new Size(100, 25);
+            txtBuscaPorId.TextChanged += txtBuscaPorId_Click;
             // 
-            // dglistapaciente
+            // dgvListaPacientes
             // 
-            dglistapaciente.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dglistapaciente.Dock = DockStyle.Fill;
-            dglistapaciente.Location = new Point(0, 25);
-            dglistapaciente.Name = "dglistapaciente";
-            dglistapaciente.Size = new Size(877, 425);
-            dglistapaciente.TabIndex = 1;
+            dgvListaPacientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvListaPacientes.Dock = DockStyle.Fill;
+            dgvListaPacientes.Location = new Point(0, 25);
+            dgvListaPacientes.Name = "dgvListaPacientes";
+            dgvListaPacientes.Size = new Size(877, 425);
+            dgvListaPacientes.TabIndex = 1;
             // 
             // PaginaPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(877, 450);
-            Controls.Add(dglistapaciente);
-            Controls.Add(toolStrip1);
+            Controls.Add(dgvListaPacientes);
+            Controls.Add(tlsBarraHerramientas);
             Name = "PaginaPrincipal";
             Text = "PacientePaginaPrincial";
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dglistapaciente).EndInit();
+            tlsBarraHerramientas.ResumeLayout(false);
+            tlsBarraHerramientas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvListaPacientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ToolStrip toolStrip1;
-        private ToolStripTextBox toolStripTextBox1;
-        private DataGridView dglistapaciente;
-        private ToolStripButton refreshBtn;
-        private ToolStripButton addEmployeeBtn;
-        private ToolStripButton editBtn;
-        private ToolStripButton toolStripButton4;
-        private ToolStripTextBox idTxtBox;
+        private ToolStrip tlsBarraHerramientas;
+        private ToolStripTextBox txtBuscarNombre;
+        private DataGridView dgvListaPacientes;
+        private ToolStripButton btnRefrescar;
+        private ToolStripButton btnAgregar;
+        private ToolStripButton btnEditar;
+        private ToolStripButton btnBorrar;
+        private ToolStripTextBox txtBuscaPorId;
     }
 }
