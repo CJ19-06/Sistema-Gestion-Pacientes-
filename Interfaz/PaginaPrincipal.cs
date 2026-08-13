@@ -1,4 +1,4 @@
-﻿using Sistema_de_gestion_de_Pacientes.Entidades;
+using Sistema_de_gestion_de_Pacientes.Entidades;
 using Sistema_de_gestion_de_Pacientes.Servicios;
 using Sistema_de_gestion_de_Pacientes.Vistas;
 using System;
@@ -18,29 +18,29 @@ namespace Sistema_de_gestion_de_Pacientes
         public PaginaPrincipal()
         {
             InitializeComponent();
-            dglistapaciente.DataSource = GestorPacientes.pacientes;
+            dgvListaPacientes.DataSource = GestorPacientes.pacientes;
         }
 
-        private void addEmployeeBtn_Click(object sender, EventArgs e)
+        private void btnAgregar_Click(object sender, EventArgs e)
         {
             new DatosPaciente().ShowDialog();
         }
 
-        private void refreshBtn_Click(object sender, EventArgs e)
+        private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            dglistapaciente.DataSource = null;
-            dglistapaciente.DataSource = GestorPacientes.pacientes;
+            dgvListaPacientes.DataSource = null;
+            dgvListaPacientes.DataSource = GestorPacientes.pacientes;
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            Paciente p = (Paciente)dglistapaciente.CurrentRow.DataBoundItem;
+            Paciente p = (Paciente)dgvListaPacientes.CurrentRow.DataBoundItem;
             new Editar(p.Id).ShowDialog();
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void btnBorrar_Click(object sender, EventArgs e)
         {
-            Paciente p = (Paciente)dglistapaciente.CurrentRow.DataBoundItem;
+            Paciente p = (Paciente)dgvListaPacientes.CurrentRow.DataBoundItem;
             // Confirmación antes de eliminar el paciente
             DialogResult dialogRes = MessageBox.Show(
                 "Desea eliminar el paciente?",
@@ -52,8 +52,8 @@ namespace Sistema_de_gestion_de_Pacientes
             {
                 // Ejecutar la eliminación existente
                 gestorPacientes.EliminarPaciente(p);
-                dglistapaciente.DataSource = null;
-                dglistapaciente.DataSource = GestorPacientes.pacientes;
+                dgvListaPacientes.DataSource = null;
+                dgvListaPacientes.DataSource = GestorPacientes.pacientes;
             }
             else
             {
@@ -63,28 +63,28 @@ namespace Sistema_de_gestion_de_Pacientes
 
         }
 
-        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        private void txtBuscarNombre_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripTextBox1_TextChanged(object sender, EventArgs e)
+        private void txtBuscarNombre_TextChanged(object sender, EventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(toolStripTextBox1.Text))
+            if (!String.IsNullOrWhiteSpace(txtBuscarNombre.Text))
             {
-                dglistapaciente.DataSource = gestorPacientes.ObtenerPacientePorNombre(toolStripTextBox1.Text);
+                dgvListaPacientes.DataSource = gestorPacientes.ObtenerPacientePorNombre(txtBuscarNombre.Text);
             }
-            else { dglistapaciente.DataSource = GestorPacientes.pacientes; }
+            else { dgvListaPacientes.DataSource = GestorPacientes.pacientes; }
 
         }
 
-        private void idTxtBox_Click(object sender, EventArgs e)
+        private void txtBuscaPorId_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(idTxtBox.Text))
+            if (!String.IsNullOrWhiteSpace(txtBuscaPorId.Text))
             {
-                dglistapaciente.DataSource = gestorPacientes.encontrarPacientePorID(int.Parse(idTxtBox.Text));
+                dgvListaPacientes.DataSource = gestorPacientes.encontrarPacientePorID(int.Parse(txtBuscaPorId.Text));
             }
-            else { dglistapaciente.DataSource = GestorPacientes.pacientes; }
+            else { dgvListaPacientes.DataSource = GestorPacientes.pacientes; }
 
         }
     }
